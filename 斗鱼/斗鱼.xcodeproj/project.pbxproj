@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F716DD51E287D1800C59E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F716DD21E287D1800C59E0D /* Main.storyboard */; };
+		2F716DDD1E287D6100C59E0D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F716DDC1E287D6100C59E0D /* Home.storyboard */; };
+		2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8579791E287DF600A56B38 /* Live.storyboard */; };
+		2F85797C1E287E0C00A56B38 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F85797B1E287E0C00A56B38 /* Follow.storyboard */; };
+		2F85797E1E287E2300A56B38 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F85797D1E287E2300A56B38 /* Me.storyboard */; };
+		2F8579801E287E7200A56B38 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85797F1E287E7200A56B38 /* MainTabBarVC.swift */; };
+		2F8579821E28806300A56B38 /* DYHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8579811E28806300A56B38 /* DYHomeVC.swift */; };
+		2F8579871E28859700A56B38 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8579861E28859700A56B38 /* UIBarButtonItem-Extension.swift */; };
+		2F8579891E28B4E400A56B38 /* DYPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8579881E28B4E400A56B38 /* DYPageTitleView.swift */; };
+		2F85798C1E28B68300A56B38 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85798B1E28B68300A56B38 /* Common.swift */; };
+		2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85798D1E28CD1E00A56B38 /* DYNavigationVC.swift */; };
+		2F8579901E28D32D00A56B38 /* DYPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85798F1E28D32D00A56B38 /* DYPageContentView.swift */; };
+		2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8579911E28D83C00A56B38 /* UIColor-Extension.swift */; };
 		2FA1F6F01E276F97001C5C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1F6EF1E276F97001C5C58 /* AppDelegate.swift */; };
-		2FA1F6F51E276F97001C5C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA1F6F31E276F97001C5C58 /* Main.storyboard */; };
 		2FA1F6F71E276F97001C5C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA1F6F61E276F97001C5C58 /* Assets.xcassets */; };
 		2FA1F6FA1E276F97001C5C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA1F6F81E276F97001C5C58 /* LaunchScreen.storyboard */; };
 		2FA1F7051E276F97001C5C58 /* __Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1F7041E276F97001C5C58 /* __Tests.swift */; };
@@ -33,9 +45,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F716DD21E287D1800C59E0D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2F716DDC1E287D6100C59E0D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "斗鱼/Classes/Home/Controller/Home.storyboard"; sourceTree = SOURCE_ROOT; };
+		2F8579791E287DF600A56B38 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Live.storyboard; path = "斗鱼/Classes/Live/Controller/Live.storyboard"; sourceTree = SOURCE_ROOT; };
+		2F85797B1E287E0C00A56B38 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Follow.storyboard; path = "斗鱼/Classes/Follow/Controller/Follow.storyboard"; sourceTree = SOURCE_ROOT; };
+		2F85797D1E287E2300A56B38 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Me.storyboard; path = "斗鱼/Classes/Me/Controller/Me.storyboard"; sourceTree = SOURCE_ROOT; };
+		2F85797F1E287E7200A56B38 /* MainTabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		2F8579811E28806300A56B38 /* DYHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYHomeVC.swift; sourceTree = "<group>"; };
+		2F8579861E28859700A56B38 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		2F8579881E28B4E400A56B38 /* DYPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPageTitleView.swift; sourceTree = "<group>"; };
+		2F85798B1E28B68300A56B38 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2F85798D1E28CD1E00A56B38 /* DYNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYNavigationVC.swift; sourceTree = "<group>"; };
+		2F85798F1E28D32D00A56B38 /* DYPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPageContentView.swift; sourceTree = "<group>"; };
+		2F8579911E28D83C00A56B38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		2FA1F6EC1E276F97001C5C58 /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA1F6EF1E276F97001C5C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FA1F6F41E276F97001C5C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FA1F6F61E276F97001C5C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FA1F6F91E276F97001C5C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FA1F6FB1E276F97001C5C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +96,138 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F716DCB1E287CC400C59E0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F716DDC1E287D6100C59E0D /* Home.storyboard */,
+				2F8579811E28806300A56B38 /* DYHomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F716DCC1E287CC400C59E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F716DCD1E287CC400C59E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F716DCE1E287CF400C59E0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F8579791E287DF600A56B38 /* Live.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F716DCF1E287CF400C59E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F716DD01E287CF400C59E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F716DD11E287D1800C59E0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F716DD21E287D1800C59E0D /* Main.storyboard */,
+				2F85797F1E287E7200A56B38 /* MainTabBarVC.swift */,
+				2F85798D1E28CD1E00A56B38 /* DYNavigationVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F716DD31E287D1800C59E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F716DD41E287D1800C59E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F8579881E28B4E400A56B38 /* DYPageTitleView.swift */,
+				2F85798F1E28D32D00A56B38 /* DYPageContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F716DD61E287D2A00C59E0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F85797D1E287E2300A56B38 /* Me.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F716DD71E287D2A00C59E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F716DD81E287D2A00C59E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F716DD91E287D3800C59E0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F85797B1E287E0C00A56B38 /* Follow.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2F716DDA1E287D3800C59E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F716DDB1E287D3800C59E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F8579831E2884B800A56B38 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2F8579861E28859700A56B38 /* UIBarButtonItem-Extension.swift */,
+				2F8579911E28D83C00A56B38 /* UIColor-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2F85798A1E28B66E00A56B38 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F85798B1E28B68300A56B38 /* Common.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2FA1F6E31E276F97001C5C58 = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +253,6 @@
 			children = (
 				2FD7350A1E278BCF00DB42DF /* Classes */,
 				2FA1F6EF1E276F97001C5C58 /* AppDelegate.swift */,
-				2FA1F6F31E276F97001C5C58 /* Main.storyboard */,
 				2FA1F6F61E276F97001C5C58 /* Assets.xcassets */,
 				2FA1F6F81E276F97001C5C58 /* LaunchScreen.storyboard */,
 				2FA1F6FB1E276F97001C5C58 /* Info.plist */,
@@ -139,6 +294,9 @@
 		2FD7350B1E278BCF00DB42DF /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				2F716DD91E287D3800C59E0D /* Controller */,
+				2F716DDA1E287D3800C59E0D /* Model */,
+				2F716DDB1E287D3800C59E0D /* View */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -146,6 +304,9 @@
 		2FD7350C1E278BCF00DB42DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2F716DCB1E287CC400C59E0D /* Controller */,
+				2F716DCC1E287CC400C59E0D /* Model */,
+				2F716DCD1E287CC400C59E0D /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -153,6 +314,9 @@
 		2FD7350D1E278BCF00DB42DF /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				2F716DCE1E287CF400C59E0D /* Controller */,
+				2F716DCF1E287CF400C59E0D /* Model */,
+				2F716DD01E287CF400C59E0D /* View */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -160,6 +324,9 @@
 		2FD7350E1E278BCF00DB42DF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2F716DD11E287D1800C59E0D /* Controller */,
+				2F716DD31E287D1800C59E0D /* Model */,
+				2F716DD41E287D1800C59E0D /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -167,6 +334,9 @@
 		2FD7350F1E278BCF00DB42DF /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				2F716DD61E287D2A00C59E0D /* Controller */,
+				2F716DD71E287D2A00C59E0D /* Model */,
+				2F716DD81E287D2A00C59E0D /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -174,6 +344,8 @@
 		2FD735101E278BCF00DB42DF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2F85798A1E28B66E00A56B38 /* Common */,
+				2F8579831E2884B800A56B38 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -240,9 +412,10 @@
 		2FA1F6E41E276F97001C5C58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DY;
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = pba;
+				ORGANIZATIONNAME = wenjun;
 				TargetAttributes = {
 					2FA1F6EB1E276F97001C5C58 = {
 						CreatedOnToolsVersion = 8.1;
@@ -288,7 +461,11 @@
 			files = (
 				2FA1F6FA1E276F97001C5C58 /* LaunchScreen.storyboard in Resources */,
 				2FA1F6F71E276F97001C5C58 /* Assets.xcassets in Resources */,
-				2FA1F6F51E276F97001C5C58 /* Main.storyboard in Resources */,
+				2F716DD51E287D1800C59E0D /* Main.storyboard in Resources */,
+				2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */,
+				2F716DDD1E287D6100C59E0D /* Home.storyboard in Resources */,
+				2F85797E1E287E2300A56B38 /* Me.storyboard in Resources */,
+				2F85797C1E287E0C00A56B38 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +490,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8579821E28806300A56B38 /* DYHomeVC.swift in Sources */,
 				2FA1F6F01E276F97001C5C58 /* AppDelegate.swift in Sources */,
+				2F8579901E28D32D00A56B38 /* DYPageContentView.swift in Sources */,
+				2F8579891E28B4E400A56B38 /* DYPageTitleView.swift in Sources */,
+				2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */,
+				2F8579871E28859700A56B38 /* UIBarButtonItem-Extension.swift in Sources */,
+				2F85798C1E28B68300A56B38 /* Common.swift in Sources */,
+				2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */,
+				2F8579801E287E7200A56B38 /* MainTabBarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,14 +534,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2FA1F6F31E276F97001C5C58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FA1F6F41E276F97001C5C58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2FA1F6F81E276F97001C5C58 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -468,7 +645,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = RV39X7P27F;
 				INFOPLIST_FILE = "斗鱼/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mushu.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,7 +660,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = RV39X7P27F;
 				INFOPLIST_FILE = "斗鱼/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mushu.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";

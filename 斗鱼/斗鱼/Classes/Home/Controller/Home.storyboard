@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SWA-gK-i5R">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="XIs-vL-sJG">
+            <objects>
+                <navigationController id="SWA-gK-i5R" customClass="DYNavigationVC" customModule="斗鱼" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tabHome" selectedImage="tabHomeHL" id="ivf-Z3-BrP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i9r-Am-rGl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XKr-dS-tFr" kind="relationship" relationship="rootViewController" id="rKX-RZ-brT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56m-Tw-YSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444" y="-1691"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="Iz6-Hx-0Ab">
+            <objects>
+                <viewController id="XKr-dS-tFr" customClass="DYHomeVC" customModule="斗鱼" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ey-kp-6jB"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYF-xl-ciQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ice-Al-D7d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wyi-tC-4o3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqP-Z2-wJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="-1691"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabHome" width="24" height="24"/>
+        <image name="tabHomeHL" width="24" height="24"/>
+    </resources>
+</document>
