@@ -7,9 +7,8 @@
 //
 
 import UIKit
-
-let kTitleViewH : CGFloat = 40.0
-
+// MARK: - 定义的常量
+private let kTitleViewH : CGFloat = 40.0
 
 class DYHomeVC: UIViewController {
     
@@ -25,10 +24,11 @@ class DYHomeVC: UIViewController {
     //懒加载pageContentView
     lazy var pageContentView : DYPageContentView = {[weak self] in
         //控制器的frame
-        let frame = CGRect(x: 0, y: kNavH + kTitleViewH, width: kScreenW, height: kScreenH-kNavH-kTitleViewH)
+        let frame = CGRect(x: 0, y: kNavH + kTitleViewH, width: kScreenW, height: kScreenH-kNavH-kTitleViewH-kTabBarH)
         
         var childsVC = [UIViewController]()
-        for _ in 0..<4{
+        childsVC.append(DYRecommendVC())
+        for _ in 0..<3{
             //1.创建子控制器
             let childVC = UIViewController()
             childVC.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
@@ -38,6 +38,7 @@ class DYHomeVC: UIViewController {
         
         let contentView = DYPageContentView(frame: frame, chlidsVC: childsVC, parentVC: self)
         
+        contentView.delegate = self
         return contentView
     }()
 
@@ -84,11 +85,6 @@ extension DYHomeVC {
         navigationItem.rightBarButtonItems = [searchItem,scanItem,historyItem];
     }
     
-    
-    
-    
-    
-    
 }
 
 
@@ -101,7 +97,14 @@ extension DYHomeVC : DYPageTitleViewDelegete {
     }
 }
 
-
+// MARK: - DYPageContentViewDelegate协议
+extension DYHomeVC : DYPageContentViewDelegate {
+    
+    func pageContentView(contentView: DYPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        //根据contentView的滑动，更新titleView
+        pageTitleView.setCurrentTitleView(progress : progress,sourceIndex : sourceIndex, targetIndex : targetIndex)
+    }
+}
 
 
 

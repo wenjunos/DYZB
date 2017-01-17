@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DYCollectionNormalCell" customModule="斗鱼" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="136"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="236" height="136"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytJ-V7-Qld">
+                        <rect key="frame" x="0.0" y="112" width="236" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="4XQ-MZ-IJS">
+                        <rect key="frame" x="0.0" y="0.0" width="236" height="107"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_phone" translatesAutoresizingMaskIntoConstraints="NO" id="3jC-dP-dOf">
+                        <rect key="frame" x="5" y="90" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="cgA-9C-WpR"/>
+                            <constraint firstAttribute="width" constant="14" id="ehe-cC-g7p"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff9-Ly-CED">
+                        <rect key="frame" x="24" y="90.5" width="202" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ytJ-V7-Qld" firstAttribute="top" secondItem="3jC-dP-dOf" secondAttribute="bottom" constant="8" id="6TF-ga-VbV"/>
+                <constraint firstAttribute="trailing" secondItem="ytJ-V7-Qld" secondAttribute="trailing" id="D7S-fP-vC3"/>
+                <constraint firstItem="3jC-dP-dOf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="K0Z-6d-Szq"/>
+                <constraint firstAttribute="bottom" secondItem="ytJ-V7-Qld" secondAttribute="bottom" constant="10" id="Osy-Re-M5s"/>
+                <constraint firstItem="Ff9-Ly-CED" firstAttribute="leading" secondItem="3jC-dP-dOf" secondAttribute="trailing" constant="5" id="U5A-ZA-GDP"/>
+                <constraint firstItem="ytJ-V7-Qld" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WHa-WD-YWc"/>
+                <constraint firstItem="4XQ-MZ-IJS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XEY-cS-S0x"/>
+                <constraint firstItem="4XQ-MZ-IJS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bBA-Lh-RGP"/>
+                <constraint firstItem="ytJ-V7-Qld" firstAttribute="top" secondItem="4XQ-MZ-IJS" secondAttribute="bottom" constant="5" id="bhK-Dv-Enn"/>
+                <constraint firstAttribute="trailing" secondItem="4XQ-MZ-IJS" secondAttribute="trailing" id="e9M-i7-s7c"/>
+                <constraint firstAttribute="trailing" secondItem="Ff9-Ly-CED" secondAttribute="trailing" constant="10" id="nyX-Ib-9pU"/>
+                <constraint firstItem="Ff9-Ly-CED" firstAttribute="centerY" secondItem="3jC-dP-dOf" secondAttribute="centerY" id="rGc-wg-JwI"/>
+            </constraints>
+            <size key="customSize" width="236" height="136"/>
+            <point key="canvasLocation" x="118" y="95"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_player_phone" width="14" height="14"/>
+    </resources>
+</document>
