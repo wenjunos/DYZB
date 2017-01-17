@@ -10,6 +10,12 @@ import UIKit
 
 let kScrollLineH : CGFloat = 2.0
 
+//class：表示这个协议只能被类遵守
+protocol DYPageTitleViewDelegete : class {
+    //协议方法
+    func pageTitleView(pageTitleView : DYPageTitleView, selectIndex : Int)
+}
+
 
 class DYPageTitleView: UIView {
     // MARK: - 定义属性
@@ -17,6 +23,12 @@ class DYPageTitleView: UIView {
     var titles = [String]()
     //装label的数组
     var titleLabelArray = [UILabel]()
+    //当前label索引
+    var currentIndex : Int = 0
+    //代理
+    weak var delegate : DYPageTitleViewDelegete?
+    
+    
     
     // MARK: - 懒加载的属性
     lazy var scrollView : UIScrollView = {
@@ -85,6 +97,11 @@ extension DYPageTitleView {
             //3.添加label
             scrollView.addSubview(label)
             titleLabelArray.append(label)
+            
+            //4.给label添加手势
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(tapGes:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     
@@ -113,8 +130,35 @@ extension DYPageTitleView {
     }
 }
 
+// MARK: - 事件处理
+extension DYPageTitleView {
+    //titleLabel的点击事件
+    @objc func titleLabelClick(tapGes : UITapGestureRecognizer){
 
-
+        //1.获取当前点击的label
+        guard let tapLabel = tapGes.view as? UILabel else { return }
+        
+        //2.获取之前的label
+        let oldLabel = titleLabelArray[currentIndex]
+        
+        //3.更新label状态
+        tapLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        //4.保存索引
+        currentIndex = tapLabel.tag
+        
+        //5.更新滚动条的位置
+        let scrollLineX = CGFloat(currentIndex) * scrollLine.frame.width
+        UIView.animate(withDuration: 0.2, animations: {
+            self.scrollLine.frame.origin.x = scrollLineX
+        })
+        
+        //6.通知代理
+        delegate?.pageTitleView(pageTitleView: self, selectIndex: currentIndex)
+        
+    }
+}
 
 
 

@@ -97,7 +97,16 @@ extension DYPageContentView : UICollectionViewDataSource {
     }
 }
 
+// MARK: - Private methold
+extension DYPageContentView {
+    //设置当前的ContentView
+    func setCurrentContentView(index : Int) {
+        //设置collectionView的偏移量
+        let offset = CGFloat(index) * frame.width
 
+        collectionView.setContentOffset(CGPoint(x: offset, y: 0), animated: false)
+    }
+}
 
 
 

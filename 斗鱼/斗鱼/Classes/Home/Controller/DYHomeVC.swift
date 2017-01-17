@@ -14,10 +14,11 @@ let kTitleViewH : CGFloat = 40.0
 class DYHomeVC: UIViewController {
     
     // MARK: - 懒加载的属性
-    lazy var pageTitleView : DYPageTitleView = {
+    lazy var pageTitleView : DYPageTitleView = {[weak self] in
         let rect = CGRect(x: 0, y: kNavH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = DYPageTitleView(frame: rect, titles: titles)
+        titleView.delegate = self
         return titleView
     }()
     
@@ -90,6 +91,15 @@ extension DYHomeVC {
     
 }
 
+
+// MARK: - DYPageTitleViewDelegete协议
+extension DYHomeVC : DYPageTitleViewDelegete {
+    
+    func pageTitleView(pageTitleView: DYPageTitleView, selectIndex: Int) {
+        //根据titleView当前选中的索引，更新contentView
+        pageContentView.setCurrentContentView(index: selectIndex)
+    }
+}
 
 
 
