@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F16DBB11E2F70A2001450A0 /* DYRecommendPrettyCell.swift */; };
+		2F16DBB41E2F70A2001450A0 /* DYRecommendPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F16DBB21E2F70A2001450A0 /* DYRecommendPrettyCell.xib */; };
 		2F6C63F41E2E078C00681550 /* DYRecommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */; };
 		2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C63F51E2E12C800681550 /* DYRecommendHeaderView.swift */; };
 		2F6C63F81E2E12C800681550 /* DYRecommendHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6C63F61E2E12C800681550 /* DYRecommendHeaderView.xib */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F16DBB11E2F70A2001450A0 /* DYRecommendPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendPrettyCell.swift; sourceTree = "<group>"; };
+		2F16DBB21E2F70A2001450A0 /* DYRecommendPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendPrettyCell.xib; sourceTree = "<group>"; };
 		2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendVC.swift; sourceTree = "<group>"; };
 		2F6C63F51E2E12C800681550 /* DYRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendHeaderView.swift; sourceTree = "<group>"; };
 		2F6C63F61E2E12C800681550 /* DYRecommendHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendHeaderView.xib; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			children = (
 				2F6C63F51E2E12C800681550 /* DYRecommendHeaderView.swift */,
 				2F6C63F61E2E12C800681550 /* DYRecommendHeaderView.xib */,
+				2F16DBB11E2F70A2001450A0 /* DYRecommendPrettyCell.swift */,
+				2F16DBB21E2F70A2001450A0 /* DYRecommendPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA1F6FA1E276F97001C5C58 /* LaunchScreen.storyboard in Resources */,
+				2F16DBB41E2F70A2001450A0 /* DYRecommendPrettyCell.xib in Resources */,
 				2FA1F6F71E276F97001C5C58 /* Assets.xcassets in Resources */,
 				2F716DD51E287D1800C59E0D /* Main.storyboard in Resources */,
 				2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */,
@@ -518,6 +525,7 @@
 				2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */,
 				2F85798C1E28B68300A56B38 /* Common.swift in Sources */,
 				2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */,
+				2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */,
 				2F8579801E287E7200A56B38 /* MainTabBarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
