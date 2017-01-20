@@ -48,11 +48,8 @@ class DYHomeVC: UIViewController {
 
         //设置UI
         setupUI()
-        
     }
     
-
-
 }
 
 // MARK: - 设置UI
@@ -86,7 +83,6 @@ extension DYHomeVC {
     }
     
 }
-
 
 // MARK: - DYPageTitleViewDelegete协议
 extension DYHomeVC : DYPageTitleViewDelegete {

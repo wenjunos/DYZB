@@ -71,6 +71,12 @@
                 <constraint firstItem="Oyf-ne-CaB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="r0V-GB-xRz"/>
             </constraints>
             <size key="customSize" width="183" height="169"/>
+            <connections>
+                <outlet property="iconView" destination="Oyf-ne-CaB" id="Hpo-Q2-6gd"/>
+                <outlet property="onlineLabel" destination="hFT-bV-HvG" id="02n-jg-8E3"/>
+                <outlet property="showImgView" destination="0BD-Bt-6vn" id="FBC-pA-M9e"/>
+                <outlet property="titleLabel" destination="ka8-Wq-0HX" id="AqX-wG-zqg"/>
+            </connections>
             <point key="canvasLocation" x="-24.5" y="29.5"/>
         </collectionViewCell>
     </objects>

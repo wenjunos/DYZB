@@ -46,20 +46,28 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1万" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrg-j9-Sxx">
-                        <rect key="frame" x="214.5" y="90.5" width="16.5" height="13.5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8R-ZI-lhy">
+                        <rect key="frame" x="176" y="0.0" width="60" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Fn3-nZ-xM9"/>
+                            <constraint firstAttribute="height" constant="18" id="qoq-Bg-UG9"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="topRightMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ytJ-V7-Qld" firstAttribute="top" secondItem="3jC-dP-dOf" secondAttribute="bottom" constant="8" id="6TF-ga-VbV"/>
+                <constraint firstAttribute="trailing" secondItem="D8R-ZI-lhy" secondAttribute="trailing" id="7i3-d2-Kfi"/>
+                <constraint firstItem="D8R-ZI-lhy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ba7-r3-gOJ"/>
                 <constraint firstAttribute="trailing" secondItem="ytJ-V7-Qld" secondAttribute="trailing" id="D7S-fP-vC3"/>
-                <constraint firstAttribute="trailing" secondItem="Qrg-j9-Sxx" secondAttribute="trailing" constant="5" id="IKK-Kf-wG6"/>
                 <constraint firstItem="3jC-dP-dOf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="K0Z-6d-Szq"/>
                 <constraint firstAttribute="bottom" secondItem="ytJ-V7-Qld" secondAttribute="bottom" constant="10" id="Osy-Re-M5s"/>
                 <constraint firstItem="Ff9-Ly-CED" firstAttribute="leading" secondItem="3jC-dP-dOf" secondAttribute="trailing" constant="5" id="U5A-ZA-GDP"/>
@@ -67,17 +75,24 @@
                 <constraint firstItem="4XQ-MZ-IJS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XEY-cS-S0x"/>
                 <constraint firstItem="4XQ-MZ-IJS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bBA-Lh-RGP"/>
                 <constraint firstItem="ytJ-V7-Qld" firstAttribute="top" secondItem="4XQ-MZ-IJS" secondAttribute="bottom" constant="5" id="bhK-Dv-Enn"/>
-                <constraint firstItem="ytJ-V7-Qld" firstAttribute="top" secondItem="Qrg-j9-Sxx" secondAttribute="bottom" constant="8" id="cVo-zi-Vl3"/>
                 <constraint firstAttribute="trailing" secondItem="4XQ-MZ-IJS" secondAttribute="trailing" id="e9M-i7-s7c"/>
                 <constraint firstAttribute="trailing" secondItem="Ff9-Ly-CED" secondAttribute="trailing" constant="10" id="nyX-Ib-9pU"/>
                 <constraint firstItem="Ff9-Ly-CED" firstAttribute="centerY" secondItem="3jC-dP-dOf" secondAttribute="centerY" id="rGc-wg-JwI"/>
             </constraints>
             <size key="customSize" width="236" height="136"/>
+            <connections>
+                <outlet property="iconView" destination="3jC-dP-dOf" id="8qu-DJ-XlF"/>
+                <outlet property="nameLabel" destination="Ff9-Ly-CED" id="23y-2R-p1e"/>
+                <outlet property="onlineBtn" destination="D8R-ZI-lhy" id="0Uy-gy-zH5"/>
+                <outlet property="showImgView" destination="4XQ-MZ-IJS" id="jai-Lb-3Nj"/>
+                <outlet property="titleLabel" destination="ytJ-V7-Qld" id="Qkk-rw-5VY"/>
+            </connections>
             <point key="canvasLocation" x="118" y="95"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="Img_default" width="172" height="103"/>
         <image name="home_live_player_phone" width="14" height="14"/>
+        <image name="topRightMask" width="60" height="18"/>
     </resources>
 </document>

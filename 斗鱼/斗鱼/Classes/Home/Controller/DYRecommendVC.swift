@@ -43,6 +43,9 @@ class DYRecommendVC: UIViewController {
         
         return collectionView
     }()
+    //recommendVM
+    lazy var recommendVM : DYRecommendVM = DYRecommendVM()
+    //数据源
     
     
     // MARK: - View life
@@ -50,7 +53,8 @@ class DYRecommendVC: UIViewController {
         super.viewDidLoad()
         //设置UI
         setupUI()
-        
+        //请求数据
+        requestData()
     }
     
 
@@ -65,36 +69,51 @@ extension DYRecommendVC {
     }
 }
 
+// MARK: - 请求数据
+extension DYRecommendVC {
+    func requestData() {
+        
+        recommendVM.requestRecommendData {
+            //刷新表格
+            self.collectionView.reloadData()
+        }
+    }
+}
+
 // MARK: - UICollectionViewDataSource
 extension DYRecommendVC : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        return 12
+        return recommendVM.AnchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        
+        let group = recommendVM.AnchorGroups[section]
+        
+        return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 1 { //颜值
             //1.创建item
-            let item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendPrettyItemID, for: indexPath)
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendPrettyItemID, for: indexPath) as! DYRecommendPrettyCell
             
             //2.设置item
+            let group = recommendVM.AnchorGroups[indexPath.section]
+            item.anchorModel = group.anchors[indexPath.item]
             
             //3.返回item
             return item
         }else{
             //1.创建item
-            let item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendItemID, for: indexPath)
+            let item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendItemID, for: indexPath) as! DYCollectionNormalCell
             
             //2.设置item
+            let group = recommendVM.AnchorGroups[indexPath.section]
+            item.anchorModel = group.anchors[indexPath.item]
             
             //3.返回item
             return item
@@ -104,15 +123,16 @@ extension DYRecommendVC : UICollectionViewDataSource,UICollectionViewDelegateFlo
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //1.创建header
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DYRecommendHeaderID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DYRecommendHeaderID, for: indexPath) as! DYRecommendHeaderView
         
         //2.设置header
-        
+        headerView.anchorGroup = recommendVM.AnchorGroups[indexPath.section]
         
         //3.返回header
         return headerView
     }
     
+    //设置item的size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if indexPath.section == 1 { //颜值
