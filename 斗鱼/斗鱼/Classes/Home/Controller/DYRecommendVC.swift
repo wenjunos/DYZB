@@ -96,28 +96,21 @@ extension DYRecommendVC : UICollectionViewDataSource,UICollectionViewDelegateFlo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //0.取出模型
+        let group = recommendVM.AnchorGroups[indexPath.section]
+        //1.定义cell
+        var item : DYCollectionBaseCell!
         
         if indexPath.section == 1 { //颜值
-            //1.创建item
-            let item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendPrettyItemID, for: indexPath) as! DYRecommendPrettyCell
-            
-            //2.设置item
-            let group = recommendVM.AnchorGroups[indexPath.section]
-            item.anchorModel = group.anchors[indexPath.item]
-            
-            //3.返回item
-            return item
+            item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendPrettyItemID, for: indexPath) as! DYRecommendPrettyCell
         }else{
-            //1.创建item
-            let item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendItemID, for: indexPath) as! DYCollectionNormalCell
-            
-            //2.设置item
-            let group = recommendVM.AnchorGroups[indexPath.section]
-            item.anchorModel = group.anchors[indexPath.item]
-            
-            //3.返回item
-            return item
+            item = collectionView.dequeueReusableCell(withReuseIdentifier: DYRecommendItemID, for: indexPath) as! DYCollectionNormalCell
         }
+        //2.设置模型
+        item.anchorModel = group.anchors[indexPath.item]
+        
+        //3.返回item
+        return item
         
     }
     
