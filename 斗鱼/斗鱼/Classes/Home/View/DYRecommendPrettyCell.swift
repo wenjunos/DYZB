@@ -9,28 +9,18 @@
 import UIKit
 import Kingfisher
 
-class DYRecommendPrettyCell: UICollectionViewCell {
-    //小图标
-    @IBOutlet weak var iconView: UIImageView!
-    //标题
-    @IBOutlet weak var titleLabel: UILabel!
-    //展示图片
-    @IBOutlet weak var showImgView: UIImageView!
-    //在线人数label
-    @IBOutlet weak var onlineLabel: UILabel!
+class DYRecommendPrettyCell: DYCollectionBaseCell {
+    //城市
+    @IBOutlet weak var cityLabel: UILabel!
     //模型
-    var anchorModel : DYAnchorModel? {
+    override var anchorModel : DYAnchorModel? {
         didSet {
-            //标题
+            //0.将模型传递给父类
+            super.anchorModel = anchorModel
+            //1.标题
             titleLabel.text = anchorModel?.nickname
-            //展示图片
-            let url = URL(string: (anchorModel?.avatar_mid)!)
-            showImgView.kf.setImage(with : url)
-            //在线人数
-            if let text = anchorModel?.online {
-                onlineLabel.text = "\(text)"
-            }
-            
+            //2.城市
+            cityLabel.text = anchorModel?.anchor_city
             
         }
     }
