@@ -11,6 +11,8 @@ import UIKit
 class DYRecommendVM: NSObject {
     // MARK: - 懒加载的属性
     lazy var AnchorGroups : [DYAnchorGroupModel] = [DYAnchorGroupModel]()
+    //banner数据
+    lazy var cycleDatas : [DYRecommendCycleModel] = [DYRecommendCycleModel]()
     //热门数据
     lazy var hotGroup : DYAnchorGroupModel = DYAnchorGroupModel()
     //颜值数据
@@ -18,6 +20,7 @@ class DYRecommendVM: NSObject {
 }
 
 extension DYRecommendVM {
+    //1.请求推荐数据
     func requestRecommendData(finishedCallBack : @escaping () -> ()) {
         //请求参数
         let param = ["limit" : "4", "offset" : "0", "time" : NSDate.getCurrentTime()]
@@ -100,5 +103,22 @@ extension DYRecommendVM {
             finishedCallBack()
         }
         
+    }
+    
+    //2.请求顶部banner数据
+    //http://www.douyutv.com/api/v1/slide/6?version=2.431
+    func requestCycleData(finishedCallBack : @escaping () -> ()) {
+        DYHttpTool.request(type: .GET, url: "http://www.douyutv.com/api/v1/slide/6", parames: ["version" : "2.431"]) { (response) in
+            //1.将结果转成字典类型
+            guard let responseDict = response as? [String : NSObject] else { return }
+            //2.取出data数据
+            guard let dicArray = responseDict["data"] as? [[String : NSObject]] else { return }
+            //3.字典转模型
+            for dict in dicArray {
+                self.cycleDatas.append(DYRecommendCycleModel(dict: dict))
+            }
+            //4.执行闭包
+            finishedCallBack()
+        }
     }
 }

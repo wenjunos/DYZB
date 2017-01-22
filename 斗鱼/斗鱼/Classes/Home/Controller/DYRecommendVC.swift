@@ -13,7 +13,8 @@ private let kItemMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 3 * kItemMargin) * 0.5
 private let kItemH : CGFloat = kItemW * 3 / 4
 private let kPrettyItemH : CGFloat = kItemW * 4 / 3
-private let kHeaderViewH : CGFloat = 40
+private let kHeaderViewH : CGFloat = 50
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
 private let DYRecommendItemID = "DYRecommendItemID"
 private let DYRecommendPrettyItemID = "DYRecommendPrettyItemID"
 private let DYRecommendHeaderID = "DYRecommendHeaderID"
@@ -27,8 +28,8 @@ class DYRecommendVC: UIViewController {
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemMargin
-        layout.sectionInset = UIEdgeInsetsMake(0, kItemMargin, 0, kItemMargin)
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
+        layout.sectionInset = UIEdgeInsetsMake(0, kItemMargin, 0, kItemMargin)
         //2.创建collectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
@@ -45,7 +46,14 @@ class DYRecommendVC: UIViewController {
     }()
     //recommendVM
     lazy var recommendVM : DYRecommendVM = DYRecommendVM()
-    //数据源
+    //顶部banner
+    lazy var cycleView : DYRecommendCycleView = {
+        let cycleView = DYRecommendCycleView.cycleView()
+        //设置frame（此时cycleView跟随父控件缩放，未显示出来）
+        //解决方案1：去掉use auto layout,并把跟随父控件缩放的约束去除
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH-kItemMargin, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
     
     
     // MARK: - View life
@@ -56,8 +64,6 @@ class DYRecommendVC: UIViewController {
         //请求数据
         requestData()
     }
-    
-
 
 }
 // MARK: - 设置UI
@@ -66,18 +72,29 @@ extension DYRecommendVC {
         
         //添加collectionView
         view.addSubview(collectionView)
+        //添加顶部banner
+        collectionView.addSubview(cycleView)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH+kItemMargin, 0, 0, 0)
     }
 }
 
 // MARK: - 请求数据
 extension DYRecommendVC {
     func requestData() {
-        
+        //1.请求推荐数据
         recommendVM.requestRecommendData {
             //刷新表格
             self.collectionView.reloadData()
         }
+        
+        //2.请求banner数据
+        recommendVM.requestCycleData {
+            //将数据传递给cycleView
+            self.cycleView.cycleDatas = self.recommendVM.cycleDatas
+        }
     }
+    
+    
 }
 
 // MARK: - UICollectionViewDataSource

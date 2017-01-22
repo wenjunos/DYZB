@@ -38,6 +38,11 @@
 		2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0520E1E30C2F00043F454 /* NSDate-Extension.swift */; };
 		2FD698211E31B96A00521E5C /* DYAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD698201E31B96A00521E5C /* DYAnchorModel.swift */; };
 		2FF3D40A1E34823D00D85F86 /* DYCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF3D4091E34823D00D85F86 /* DYCollectionBaseCell.swift */; };
+		2FF8ACB71E348FF700FB4C64 /* DYRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8ACB61E348FF700FB4C64 /* DYRecommendCycleView.swift */; };
+		2FF8ACB91E34900500FB4C64 /* DYRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8ACB81E34900500FB4C64 /* DYRecommendCycleView.xib */; };
+		2FF8ACBC1E349B1700FB4C64 /* DYRecommendCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8ACBA1E349B1700FB4C64 /* DYRecommendCycleCell.swift */; };
+		2FF8ACBD1E349B1700FB4C64 /* DYRecommendCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8ACBB1E349B1700FB4C64 /* DYRecommendCycleCell.xib */; };
+		2FF8ACBF1E34B6D300FB4C64 /* DYRecommendCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8ACBE1E34B6D300FB4C64 /* DYRecommendCycleModel.swift */; };
 		AFA805AEAF05019CB193D0D8 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07906003F095580FFD7BE8FE /* Pods___.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +102,11 @@
 		2FD0520E1E30C2F00043F454 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		2FD698201E31B96A00521E5C /* DYAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAnchorModel.swift; sourceTree = "<group>"; };
 		2FF3D4091E34823D00D85F86 /* DYCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYCollectionBaseCell.swift; sourceTree = "<group>"; };
+		2FF8ACB61E348FF700FB4C64 /* DYRecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendCycleView.swift; sourceTree = "<group>"; };
+		2FF8ACB81E34900500FB4C64 /* DYRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendCycleView.xib; sourceTree = "<group>"; };
+		2FF8ACBA1E349B1700FB4C64 /* DYRecommendCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendCycleCell.swift; sourceTree = "<group>"; };
+		2FF8ACBB1E349B1700FB4C64 /* DYRecommendCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendCycleCell.xib; sourceTree = "<group>"; };
+		2FF8ACBE1E34B6D300FB4C64 /* DYRecommendCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendCycleModel.swift; sourceTree = "<group>"; };
 		3095A566B0ABD1BEECAF64D1 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
 		D30D66277B8DBDC6D418189A /* Pods-斗鱼.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +158,7 @@
 		2F716DCC1E287CC400C59E0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2FF8ACBE1E34B6D300FB4C64 /* DYRecommendCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +170,10 @@
 				2F6C63F61E2E12C800681550 /* DYRecommendHeaderView.xib */,
 				2F16DBB11E2F70A2001450A0 /* DYRecommendPrettyCell.swift */,
 				2F16DBB21E2F70A2001450A0 /* DYRecommendPrettyCell.xib */,
+				2FF8ACB61E348FF700FB4C64 /* DYRecommendCycleView.swift */,
+				2FF8ACB81E34900500FB4C64 /* DYRecommendCycleView.xib */,
+				2FF8ACBA1E349B1700FB4C64 /* DYRecommendCycleCell.swift */,
+				2FF8ACBB1E349B1700FB4C64 /* DYRecommendCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,10 +556,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF8ACBD1E349B1700FB4C64 /* DYRecommendCycleCell.xib in Resources */,
 				2FA1F6FA1E276F97001C5C58 /* LaunchScreen.storyboard in Resources */,
 				2F16DBB41E2F70A2001450A0 /* DYRecommendPrettyCell.xib in Resources */,
 				2FA1F6F71E276F97001C5C58 /* Assets.xcassets in Resources */,
 				2F716DD51E287D1800C59E0D /* Main.storyboard in Resources */,
+				2FF8ACB91E34900500FB4C64 /* DYRecommendCycleView.xib in Resources */,
 				2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */,
 				2F6C63FC1E2E2B5600681550 /* DYCollectionNormalCell.xib in Resources */,
 				2F716DDD1E287D6100C59E0D /* Home.storyboard in Resources */,
@@ -632,15 +649,18 @@
 				2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */,
 				2F8579871E28859700A56B38 /* UIBarButtonItem-Extension.swift in Sources */,
 				2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */,
+				2FF8ACB71E348FF700FB4C64 /* DYRecommendCycleView.swift in Sources */,
 				2F9DB34F1E30D2E200E5BE09 /* DYAnchorGroupModel.swift in Sources */,
 				2FF3D40A1E34823D00D85F86 /* DYCollectionBaseCell.swift in Sources */,
 				2F85798C1E28B68300A56B38 /* Common.swift in Sources */,
+				2FF8ACBC1E349B1700FB4C64 /* DYRecommendCycleCell.swift in Sources */,
 				2FD698211E31B96A00521E5C /* DYAnchorModel.swift in Sources */,
 				2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */,
 				2FD0520D1E30C1D80043F454 /* DYRecommendVM.swift in Sources */,
 				2FD0520A1E30983D0043F454 /* DYHttpTool.swift in Sources */,
 				2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */,
 				2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */,
+				2FF8ACBF1E34B6D300FB4C64 /* DYRecommendCycleModel.swift in Sources */,
 				2F8579801E287E7200A56B38 /* MainTabBarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

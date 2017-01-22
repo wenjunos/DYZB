@@ -16,17 +16,10 @@ class DYRecommendHeaderView: UICollectionReusableView {
     //模型
     var anchorGroup : DYAnchorGroupModel?{
         didSet{
+            //组标题
             titleLabel.text = anchorGroup?.tag_name
+            //组图片
             iconView.image = UIImage(named: anchorGroup?.icon_name ?? "home_header_normal")
         }
     }
-    
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-    }
-    
-    
 }
