@@ -15,6 +15,8 @@ private let kItemH : CGFloat = kItemW * 3 / 4
 private let kPrettyItemH : CGFloat = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
 private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
+
 private let DYRecommendItemID = "DYRecommendItemID"
 private let DYRecommendPrettyItemID = "DYRecommendPrettyItemID"
 private let DYRecommendHeaderID = "DYRecommendHeaderID"
@@ -51,10 +53,15 @@ class DYRecommendVC: UIViewController {
         let cycleView = DYRecommendCycleView.cycleView()
         //设置frame（此时cycleView跟随父控件缩放，未显示出来）
         //解决方案1：去掉use auto layout,并把跟随父控件缩放的约束去除
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH-kItemMargin, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH-kGameViewH, width: kScreenW, height: kCycleViewH)
         return cycleView
     }()
-    
+    //游戏模块
+    lazy var gameView : DYRecommendGameView = {
+        let gameView = DYRecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
+    }()
     
     // MARK: - View life
     override func viewDidLoad() {
@@ -70,11 +77,14 @@ class DYRecommendVC: UIViewController {
 extension DYRecommendVC {
     func setupUI() {
         
-        //添加collectionView
+        //1. 添加collectionView
         view.addSubview(collectionView)
-        //添加顶部banner
+        //2. 添加顶部banner
         collectionView.addSubview(cycleView)
-        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH+kItemMargin, 0, 0, 0)
+        //3. 添加gameView
+        collectionView.addSubview(gameView)
+        //4. 设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH+kGameViewH, 0, 0, 0)
     }
 }
 
@@ -83,8 +93,11 @@ extension DYRecommendVC {
     func requestData() {
         //1.请求推荐数据
         recommendVM.requestRecommendData {
-            //刷新表格
+            //1.1 刷新表格
             self.collectionView.reloadData()
+            
+            //1.2 传递数据给gameView
+            self.gameView.groupArray = self.recommendVM.AnchorGroups
         }
         
         //2.请求banner数据

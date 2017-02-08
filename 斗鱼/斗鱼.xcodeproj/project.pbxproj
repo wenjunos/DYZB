@@ -37,6 +37,10 @@
 		2FD0520D1E30C1D80043F454 /* DYRecommendVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */; };
 		2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0520E1E30C2F00043F454 /* NSDate-Extension.swift */; };
 		2FD698211E31B96A00521E5C /* DYAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD698201E31B96A00521E5C /* DYAnchorModel.swift */; };
+		2FE61BC11E4B199100984343 /* DYRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE61BC01E4B199100984343 /* DYRecommendGameView.swift */; };
+		2FE61BC31E4B19B700984343 /* DYRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE61BC21E4B19B700984343 /* DYRecommendGameView.xib */; };
+		2FE61BC61E4B281000984343 /* DYRecommendGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE61BC41E4B281000984343 /* DYRecommendGameCell.swift */; };
+		2FE61BC71E4B281000984343 /* DYRecommendGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE61BC51E4B281000984343 /* DYRecommendGameCell.xib */; };
 		2FF3D40A1E34823D00D85F86 /* DYCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF3D4091E34823D00D85F86 /* DYCollectionBaseCell.swift */; };
 		2FF8ACB71E348FF700FB4C64 /* DYRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8ACB61E348FF700FB4C64 /* DYRecommendCycleView.swift */; };
 		2FF8ACB91E34900500FB4C64 /* DYRecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8ACB81E34900500FB4C64 /* DYRecommendCycleView.xib */; };
@@ -101,6 +105,10 @@
 		2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendVM.swift; sourceTree = "<group>"; };
 		2FD0520E1E30C2F00043F454 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		2FD698201E31B96A00521E5C /* DYAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAnchorModel.swift; sourceTree = "<group>"; };
+		2FE61BC01E4B199100984343 /* DYRecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendGameView.swift; sourceTree = "<group>"; };
+		2FE61BC21E4B19B700984343 /* DYRecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendGameView.xib; sourceTree = "<group>"; };
+		2FE61BC41E4B281000984343 /* DYRecommendGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendGameCell.swift; sourceTree = "<group>"; };
+		2FE61BC51E4B281000984343 /* DYRecommendGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendGameCell.xib; sourceTree = "<group>"; };
 		2FF3D4091E34823D00D85F86 /* DYCollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYCollectionBaseCell.swift; sourceTree = "<group>"; };
 		2FF8ACB61E348FF700FB4C64 /* DYRecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendCycleView.swift; sourceTree = "<group>"; };
 		2FF8ACB81E34900500FB4C64 /* DYRecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendCycleView.xib; sourceTree = "<group>"; };
@@ -174,6 +182,10 @@
 				2FF8ACB81E34900500FB4C64 /* DYRecommendCycleView.xib */,
 				2FF8ACBA1E349B1700FB4C64 /* DYRecommendCycleCell.swift */,
 				2FF8ACBB1E349B1700FB4C64 /* DYRecommendCycleCell.xib */,
+				2FE61BC01E4B199100984343 /* DYRecommendGameView.swift */,
+				2FE61BC21E4B19B700984343 /* DYRecommendGameView.xib */,
+				2FE61BC41E4B281000984343 /* DYRecommendGameCell.swift */,
+				2FE61BC51E4B281000984343 /* DYRecommendGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -563,9 +575,11 @@
 				2F716DD51E287D1800C59E0D /* Main.storyboard in Resources */,
 				2FF8ACB91E34900500FB4C64 /* DYRecommendCycleView.xib in Resources */,
 				2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */,
+				2FE61BC31E4B19B700984343 /* DYRecommendGameView.xib in Resources */,
 				2F6C63FC1E2E2B5600681550 /* DYCollectionNormalCell.xib in Resources */,
 				2F716DDD1E287D6100C59E0D /* Home.storyboard in Resources */,
 				2F6C63F81E2E12C800681550 /* DYRecommendHeaderView.xib in Resources */,
+				2FE61BC71E4B281000984343 /* DYRecommendGameCell.xib in Resources */,
 				2F85797E1E287E2300A56B38 /* Me.storyboard in Resources */,
 				2F85797C1E287E0C00A56B38 /* Follow.storyboard in Resources */,
 			);
@@ -646,6 +660,7 @@
 				2F6C63F41E2E078C00681550 /* DYRecommendVC.swift in Sources */,
 				2F8579901E28D32D00A56B38 /* DYPageContentView.swift in Sources */,
 				2F8579891E28B4E400A56B38 /* DYPageTitleView.swift in Sources */,
+				2FE61BC11E4B199100984343 /* DYRecommendGameView.swift in Sources */,
 				2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */,
 				2F8579871E28859700A56B38 /* UIBarButtonItem-Extension.swift in Sources */,
 				2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */,
@@ -660,6 +675,7 @@
 				2FD0520A1E30983D0043F454 /* DYHttpTool.swift in Sources */,
 				2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */,
 				2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */,
+				2FE61BC61E4B281000984343 /* DYRecommendGameCell.swift in Sources */,
 				2FF8ACBF1E34B6D300FB4C64 /* DYRecommendCycleModel.swift in Sources */,
 				2F8579801E287E7200A56B38 /* MainTabBarVC.swift in Sources */,
 			);

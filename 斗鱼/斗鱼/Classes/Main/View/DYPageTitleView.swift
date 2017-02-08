@@ -168,7 +168,7 @@ extension DYPageTitleView {
 extension DYPageTitleView {
     //设置TitleView当前滑动的位置
     func setCurrentTitleView(progress : CGFloat, sourceIndex : Int, targetIndex : Int){
-        //1.取出当前的label和之前的label
+        //1.取出之前的label和目标label
         let sourceLabel = titleLabelArray[sourceIndex]
         let targetLabel = titleLabelArray[targetIndex]
         
