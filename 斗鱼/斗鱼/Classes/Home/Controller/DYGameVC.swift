@@ -11,8 +11,10 @@ import UIKit
 private let kEdgeMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH : CGFloat = kItemW * 6 / 5
+private let kHeaderViewH : CGFloat = 50
 
 private let gameCellID : String = "gameCellID"
+private let gameHeaderViewID : String = "gameHeaderViewID"
 
 class DYGameVC: UIViewController {
     // MARK: - 定义的属性
@@ -26,6 +28,8 @@ class DYGameVC: UIViewController {
         layout.itemSize = CGSize(width: kItemW, height: kItemH)
         //设置边距
         layout.sectionInset = UIEdgeInsetsMake(0, kEdgeMargin, 0, kEdgeMargin)
+        //头部视图
+        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         
         //2. 创建UICollectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
@@ -34,11 +38,15 @@ class DYGameVC: UIViewController {
         collectionView.dataSource = self
         //注册cell
         collectionView.register(UINib(nibName: "DYRecommendGameCell", bundle: nil), forCellWithReuseIdentifier: gameCellID)
-        
+        //注册header
+        collectionView.register(UINib(nibName: "DYRecommendHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: gameHeaderViewID)
         return collectionView
     }()
+    //顶部视图
+//    fileprivate lazy var topHeaderView : DYRecommendHeaderView = {
+//        
+//    }()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +55,8 @@ class DYGameVC: UIViewController {
         
         //2.请求数据
         requestData()
+        
+        
     }
 
 
@@ -86,6 +96,18 @@ extension DYGameVC : UICollectionViewDataSource {
         cell.baseGameModel = gameModel
         
         return cell
+        
+    }
+    //头部视图
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: gameHeaderViewID, for: indexPath) as! DYRecommendHeaderView
+        
+        header.titleLabel.text = "全部"
+        header.iconView.image = UIImage(named: "Img_orange")
+        header.moreBtn.isHidden = true
+        
+        return header
         
     }
 }

@@ -379,8 +379,8 @@
 		2FD0520B1E30C18E0043F454 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */,
 				2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */,
+				2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

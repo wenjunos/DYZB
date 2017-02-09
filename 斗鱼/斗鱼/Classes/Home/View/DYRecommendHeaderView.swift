@@ -13,6 +13,8 @@ class DYRecommendHeaderView: UICollectionReusableView {
     @IBOutlet weak var iconView: UIImageView!
     //标题
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var moreBtn: UIButton!
     //模型
     var anchorGroup : DYAnchorGroupModel?{
         didSet{
