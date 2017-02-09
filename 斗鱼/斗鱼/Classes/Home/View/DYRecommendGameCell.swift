@@ -14,13 +14,21 @@ class DYRecommendGameCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var iconView: UIImageView!
+    //分割线
+    @IBOutlet weak var seperatorLine: UIView!
     
-    var anchorGroup : DYAnchorGroupModel? {
+    var baseGameModel : DYBaseGameModel? {
         didSet{
+            //是否需要分割线
+            if baseGameModel?.isNeedLine == true {
+                seperatorLine.isHidden = false
+            }else{
+                seperatorLine.isHidden = true
+            }
             //标题
-            titleLabel.text = anchorGroup?.tag_name
+            titleLabel.text = baseGameModel?.tag_name
             //图片
-            iconView.kf.setImage(with: URL(string: (anchorGroup?.icon_url)!), placeholder: UIImage(named: "home_more_btn"), options: nil, progressBlock: nil, completionHandler: nil)
+            iconView.kf.setImage(with: URL(string: (baseGameModel?.icon_url)!), placeholder: UIImage(named: "home_more_btn"))
         }
     }
     

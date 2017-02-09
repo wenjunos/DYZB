@@ -60,7 +60,7 @@ extension DYRecommendGameView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: gameViewItemID, for: indexPath) as! DYRecommendGameCell
 
-        item.anchorGroup = groupArray?[indexPath.item]
+        item.baseGameModel = groupArray?[indexPath.item]
         
         return item
         

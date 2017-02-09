@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F16DBB11E2F70A2001450A0 /* DYRecommendPrettyCell.swift */; };
 		2F16DBB41E2F70A2001450A0 /* DYRecommendPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F16DBB21E2F70A2001450A0 /* DYRecommendPrettyCell.xib */; };
+		2F2AD9D61E4C73C6005B5762 /* DYGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AD9D51E4C73C6005B5762 /* DYGameVC.swift */; };
+		2F2AD9D81E4C73D8005B5762 /* DYBaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AD9D71E4C73D8005B5762 /* DYBaseGameModel.swift */; };
+		2F2AD9DA1E4C7400005B5762 /* DYGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */; };
+		2F2AD9DC1E4C74FF005B5762 /* DYGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2AD9DB1E4C74FF005B5762 /* DYGameModel.swift */; };
 		2F6C63F41E2E078C00681550 /* DYRecommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */; };
 		2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6C63F51E2E12C800681550 /* DYRecommendHeaderView.swift */; };
 		2F6C63F81E2E12C800681550 /* DYRecommendHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6C63F61E2E12C800681550 /* DYRecommendHeaderView.xib */; };
@@ -71,6 +75,10 @@
 		07906003F095580FFD7BE8FE /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F16DBB11E2F70A2001450A0 /* DYRecommendPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendPrettyCell.swift; sourceTree = "<group>"; };
 		2F16DBB21E2F70A2001450A0 /* DYRecommendPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendPrettyCell.xib; sourceTree = "<group>"; };
+		2F2AD9D51E4C73C6005B5762 /* DYGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYGameVC.swift; sourceTree = "<group>"; };
+		2F2AD9D71E4C73D8005B5762 /* DYBaseGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYBaseGameModel.swift; sourceTree = "<group>"; };
+		2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYGameVM.swift; sourceTree = "<group>"; };
+		2F2AD9DB1E4C74FF005B5762 /* DYGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYGameModel.swift; sourceTree = "<group>"; };
 		2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendVC.swift; sourceTree = "<group>"; };
 		2F6C63F51E2E12C800681550 /* DYRecommendHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendHeaderView.swift; sourceTree = "<group>"; };
 		2F6C63F61E2E12C800681550 /* DYRecommendHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendHeaderView.xib; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				2F716DDC1E287D6100C59E0D /* Home.storyboard */,
 				2F8579811E28806300A56B38 /* DYHomeVC.swift */,
 				2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */,
+				2F2AD9D51E4C73C6005B5762 /* DYGameVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +175,7 @@
 		2F716DCC1E287CC400C59E0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2F2AD9DB1E4C74FF005B5762 /* DYGameModel.swift */,
 				2FF8ACBE1E34B6D300FB4C64 /* DYRecommendCycleModel.swift */,
 			);
 			path = Model;
@@ -227,6 +237,7 @@
 			children = (
 				2F9DB34E1E30D2E200E5BE09 /* DYAnchorGroupModel.swift */,
 				2FD698201E31B96A00521E5C /* DYAnchorModel.swift */,
+				2F2AD9D71E4C73D8005B5762 /* DYBaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +379,7 @@
 		2FD0520B1E30C18E0043F454 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */,
 				2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */,
 			);
 			path = ViewModel;
@@ -654,6 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2AD9D61E4C73C6005B5762 /* DYGameVC.swift in Sources */,
 				2F8579821E28806300A56B38 /* DYHomeVC.swift in Sources */,
 				2F6C63FB1E2E2B5600681550 /* DYCollectionNormalCell.swift in Sources */,
 				2FA1F6F01E276F97001C5C58 /* AppDelegate.swift in Sources */,
@@ -664,6 +677,9 @@
 				2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */,
 				2F8579871E28859700A56B38 /* UIBarButtonItem-Extension.swift in Sources */,
 				2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */,
+				2F2AD9D81E4C73D8005B5762 /* DYBaseGameModel.swift in Sources */,
+				2F2AD9DC1E4C74FF005B5762 /* DYGameModel.swift in Sources */,
+				2F2AD9DA1E4C7400005B5762 /* DYGameVM.swift in Sources */,
 				2FF8ACB71E348FF700FB4C64 /* DYRecommendCycleView.swift in Sources */,
 				2F9DB34F1E30D2E200E5BE09 /* DYAnchorGroupModel.swift in Sources */,
 				2FF3D40A1E34823D00D85F86 /* DYCollectionBaseCell.swift in Sources */,

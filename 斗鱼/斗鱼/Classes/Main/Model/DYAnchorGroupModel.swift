@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DYAnchorGroupModel: NSObject {
+class DYAnchorGroupModel: DYBaseGameModel {
     //房间列表
     var room_list : [[String : NSObject]]? {
         //属性监听器
@@ -24,23 +24,6 @@ class DYAnchorGroupModel: NSObject {
     }
     //头像
     var icon_name : String = "home_header_normal"
-    //游戏栏的头像
-    var icon_url : String = ""
-    //分类名
-    var tag_name : String = ""
     //子模型
     var anchors : [DYAnchorModel] = [DYAnchorModel]()
-    
-    //构造函数
-    override init() {
-        
-    }
-    
-    init(dict : [String : NSObject]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }

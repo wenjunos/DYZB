@@ -19,10 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-z9-btw">
-                        <rect key="frame" x="24.5" y="65.5" width="31" height="14.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14.5" id="97y-hT-7RY"/>
-                        </constraints>
+                        <rect key="frame" x="24.5" y="64" width="31" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -30,8 +27,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SXc-ms-WHO">
                         <rect key="frame" x="18.5" y="15" width="44" height="44"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="44" id="7n0-UP-Mbz"/>
-                            <constraint firstAttribute="height" constant="44" id="wq4-IN-YNb"/>
+                            <constraint firstAttribute="height" constant="44" id="1qF-Zz-yqj"/>
+                            <constraint firstAttribute="width" constant="44" id="EsT-oU-bey"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -40,16 +37,27 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U87-H1-w6f">
+                        <rect key="frame" x="0.0" y="89" width="80" height="1"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Jth-3s-JJL"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="SXc-ms-WHO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="20I-AW-0CT"/>
-                <constraint firstAttribute="bottom" secondItem="3mC-z9-btw" secondAttribute="bottom" constant="10" id="Egi-9T-utO"/>
-                <constraint firstItem="SXc-ms-WHO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Gib-0N-1ug"/>
-                <constraint firstItem="3mC-z9-btw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Zbu-Rj-W0m"/>
+                <constraint firstAttribute="bottom" secondItem="U87-H1-w6f" secondAttribute="bottom" id="3Zh-Uy-qTy"/>
+                <constraint firstItem="U87-H1-w6f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Nb-Kf-MyE"/>
+                <constraint firstItem="3mC-z9-btw" firstAttribute="top" secondItem="SXc-ms-WHO" secondAttribute="bottom" constant="5" id="E2h-Vp-oYn"/>
+                <constraint firstItem="SXc-ms-WHO" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="UtH-cB-JFC"/>
+                <constraint firstAttribute="trailing" secondItem="U87-H1-w6f" secondAttribute="trailing" id="XcI-Nq-8F8"/>
+                <constraint firstItem="SXc-ms-WHO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ym4-13-IrU"/>
+                <constraint firstItem="3mC-z9-btw" firstAttribute="centerX" secondItem="SXc-ms-WHO" secondAttribute="centerX" id="rU9-8L-V60"/>
             </constraints>
             <connections>
                 <outlet property="iconView" destination="SXc-ms-WHO" id="1xq-5b-rIA"/>
+                <outlet property="seperatorLine" destination="U87-H1-w6f" id="3tH-eF-hXz"/>
                 <outlet property="titleLabel" destination="3mC-z9-btw" id="brz-V3-DEe"/>
             </connections>
         </collectionViewCell>
