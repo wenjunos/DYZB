@@ -8,9 +8,8 @@
 
 import UIKit
 
-class DYRecommendVM: NSObject {
+class DYRecommendVM : DYAnchorBaseViewModel {
     // MARK: - 懒加载的属性
-    lazy var AnchorGroups : [DYAnchorGroupModel] = [DYAnchorGroupModel]()
     //banner数据
     lazy var cycleDatas : [DYRecommendCycleModel] = [DYRecommendCycleModel]()
     //热门数据
@@ -74,25 +73,11 @@ extension DYRecommendVM {
         //print(NSDate.getCurrentTime())
 
         disGroup.enter()
-        DYHttpTool.request(type: .GET, url: "http://capi.douyucdn.cn/api/v1/getHotCate", parames: param) { (response) in
-            //3.1将结果转成字典类型
-            guard let result = response as? [String : NSObject] else { return }
-            //3.2取出需要的数据
-            guard let data = result["data"] as? [[String : NSObject]] else { return }
-            //3.3字典转模型
-            for dict in data {
-                let anchorGroup = DYAnchorGroupModel(dict: dict)
-                //删除这里的颜值数据
-                if anchorGroup.tag_name == "颜值" {
-                    continue
-                }
-                self.AnchorGroups.append(anchorGroup)
-            }
-            //3.5离开组
+        requestData(url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: param) { 
+            //离开组
             disGroup.leave()
-
         }
-        
+
         //4.合并数据
         disGroup.notify(queue: DispatchQueue.main) {
             

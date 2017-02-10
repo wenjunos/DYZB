@@ -17,7 +17,7 @@ enum MethodType {
 
 class DYHttpTool: NSObject {
 
-    class func request(type : MethodType, url : String, parames : [String : String]? = nil, callBack : @escaping (_ response : Any) -> ()) {
+    class func request(type : MethodType, url : String, parames : [String : Any]? = nil, callBack : @escaping (_ response : Any) -> ()) {
         //请求类型
         let methodType = type == .GET ? HTTPMethod.get : HTTPMethod.post
         

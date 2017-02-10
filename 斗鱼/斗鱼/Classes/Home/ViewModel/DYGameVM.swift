@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DYGameVM: NSObject {
+class DYGameVM {
     // MARK: - 定义的属性
     var gameDatas = [DYGameModel]()
     

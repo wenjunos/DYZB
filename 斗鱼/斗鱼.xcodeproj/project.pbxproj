@@ -31,6 +31,8 @@
 		2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85798D1E28CD1E00A56B38 /* DYNavigationVC.swift */; };
 		2F8579901E28D32D00A56B38 /* DYPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F85798F1E28D32D00A56B38 /* DYPageContentView.swift */; };
 		2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8579911E28D83C00A56B38 /* UIColor-Extension.swift */; };
+		2F9548261E4DB0BB007E1DF9 /* DYAmuseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9548251E4DB0BB007E1DF9 /* DYAmuseVM.swift */; };
+		2F9548291E4DC771007E1DF9 /* DYAnchorBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9548281E4DC771007E1DF9 /* DYAnchorBaseViewModel.swift */; };
 		2F9DB34F1E30D2E200E5BE09 /* DYAnchorGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9DB34E1E30D2E200E5BE09 /* DYAnchorGroupModel.swift */; };
 		2FA1F6F01E276F97001C5C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA1F6EF1E276F97001C5C58 /* AppDelegate.swift */; };
 		2FA1F6F71E276F97001C5C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA1F6F61E276F97001C5C58 /* Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		2F85798D1E28CD1E00A56B38 /* DYNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYNavigationVC.swift; sourceTree = "<group>"; };
 		2F85798F1E28D32D00A56B38 /* DYPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPageContentView.swift; sourceTree = "<group>"; };
 		2F8579911E28D83C00A56B38 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		2F9548251E4DB0BB007E1DF9 /* DYAmuseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAmuseVM.swift; sourceTree = "<group>"; };
+		2F9548281E4DC771007E1DF9 /* DYAnchorBaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAnchorBaseViewModel.swift; sourceTree = "<group>"; };
 		2F9DB34E1E30D2E200E5BE09 /* DYAnchorGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAnchorGroupModel.swift; sourceTree = "<group>"; };
 		2FA1F6EC1E276F97001C5C58 /* 斗鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA1F6EF1E276F97001C5C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +326,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		2F9548271E4DC74F007E1DF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F9548281E4DC771007E1DF9 /* DYAnchorBaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2FA1F6E31E276F97001C5C58 = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +399,7 @@
 			children = (
 				2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */,
 				2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */,
+				2F9548251E4DB0BB007E1DF9 /* DYAmuseVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -438,6 +451,7 @@
 		2FD7350E1E278BCF00DB42DF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2F9548271E4DC74F007E1DF9 /* ViewModel */,
 				2F716DD11E287D1800C59E0D /* Controller */,
 				2F716DD31E287D1800C59E0D /* Model */,
 				2F716DD41E287D1800C59E0D /* View */,
@@ -692,10 +706,12 @@
 				2F85798C1E28B68300A56B38 /* Common.swift in Sources */,
 				2FF8ACBC1E349B1700FB4C64 /* DYRecommendCycleCell.swift in Sources */,
 				2FD698211E31B96A00521E5C /* DYAnchorModel.swift in Sources */,
+				2F9548291E4DC771007E1DF9 /* DYAnchorBaseViewModel.swift in Sources */,
 				2FF8B8031E4D6F9000953316 /* DYBaseCollectionVC.swift in Sources */,
 				2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */,
 				2FD0520D1E30C1D80043F454 /* DYRecommendVM.swift in Sources */,
 				2FF8B8011E4D6BC500953316 /* DYAmuseVC.swift in Sources */,
+				2F9548261E4DB0BB007E1DF9 /* DYAmuseVM.swift in Sources */,
 				2FD0520A1E30983D0043F454 /* DYHttpTool.swift in Sources */,
 				2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */,
 				2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */,
