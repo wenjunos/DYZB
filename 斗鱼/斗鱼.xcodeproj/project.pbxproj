@@ -51,6 +51,8 @@
 		2FF8ACBC1E349B1700FB4C64 /* DYRecommendCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8ACBA1E349B1700FB4C64 /* DYRecommendCycleCell.swift */; };
 		2FF8ACBD1E349B1700FB4C64 /* DYRecommendCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8ACBB1E349B1700FB4C64 /* DYRecommendCycleCell.xib */; };
 		2FF8ACBF1E34B6D300FB4C64 /* DYRecommendCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8ACBE1E34B6D300FB4C64 /* DYRecommendCycleModel.swift */; };
+		2FF8B8011E4D6BC500953316 /* DYAmuseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8B8001E4D6BC500953316 /* DYAmuseVC.swift */; };
+		2FF8B8031E4D6F9000953316 /* DYBaseCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8B8021E4D6F9000953316 /* DYBaseCollectionVC.swift */; };
 		AFA805AEAF05019CB193D0D8 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07906003F095580FFD7BE8FE /* Pods___.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,8 @@
 		2FF8ACBA1E349B1700FB4C64 /* DYRecommendCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendCycleCell.swift; sourceTree = "<group>"; };
 		2FF8ACBB1E349B1700FB4C64 /* DYRecommendCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendCycleCell.xib; sourceTree = "<group>"; };
 		2FF8ACBE1E34B6D300FB4C64 /* DYRecommendCycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendCycleModel.swift; sourceTree = "<group>"; };
+		2FF8B8001E4D6BC500953316 /* DYAmuseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAmuseVC.swift; sourceTree = "<group>"; };
+		2FF8B8021E4D6F9000953316 /* DYBaseCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYBaseCollectionVC.swift; sourceTree = "<group>"; };
 		3095A566B0ABD1BEECAF64D1 /* Pods-斗鱼.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.debug.xcconfig"; sourceTree = "<group>"; };
 		D30D66277B8DBDC6D418189A /* Pods-斗鱼.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼/Pods-斗鱼.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +172,7 @@
 				2F8579811E28806300A56B38 /* DYHomeVC.swift */,
 				2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */,
 				2F2AD9D51E4C73C6005B5762 /* DYGameVC.swift */,
+				2FF8B8001E4D6BC500953316 /* DYAmuseVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				2F716DD21E287D1800C59E0D /* Main.storyboard */,
 				2F85797F1E287E7200A56B38 /* MainTabBarVC.swift */,
 				2F85798D1E28CD1E00A56B38 /* DYNavigationVC.swift */,
+				2FF8B8021E4D6F9000953316 /* DYBaseCollectionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -686,8 +692,10 @@
 				2F85798C1E28B68300A56B38 /* Common.swift in Sources */,
 				2FF8ACBC1E349B1700FB4C64 /* DYRecommendCycleCell.swift in Sources */,
 				2FD698211E31B96A00521E5C /* DYAnchorModel.swift in Sources */,
+				2FF8B8031E4D6F9000953316 /* DYBaseCollectionVC.swift in Sources */,
 				2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */,
 				2FD0520D1E30C1D80043F454 /* DYRecommendVM.swift in Sources */,
+				2FF8B8011E4D6BC500953316 /* DYAmuseVC.swift in Sources */,
 				2FD0520A1E30983D0043F454 /* DYHttpTool.swift in Sources */,
 				2F85798E1E28CD1E00A56B38 /* DYNavigationVC.swift in Sources */,
 				2F16DBB31E2F70A2001450A0 /* DYRecommendPrettyCell.swift in Sources */,

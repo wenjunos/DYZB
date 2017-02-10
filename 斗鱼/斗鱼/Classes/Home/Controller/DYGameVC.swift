@@ -12,6 +12,7 @@ private let kEdgeMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH : CGFloat = kItemW * 6 / 5
 private let kHeaderViewH : CGFloat = 50
+private let kTopViewH : CGFloat = 90
 
 private let gameCellID : String = "gameCellID"
 private let gameHeaderViewID : String = "gameHeaderViewID"
@@ -42,11 +43,23 @@ class DYGameVC: UIViewController {
         collectionView.register(UINib(nibName: "DYRecommendHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: gameHeaderViewID)
         return collectionView
     }()
+    //顶部的头部视图
+    fileprivate lazy var topHeaderView : DYRecommendHeaderView = {
+        let topHeaderView = DYRecommendHeaderView.headerView()
+        topHeaderView.frame = CGRect(x: 0, y: -(kHeaderViewH+kTopViewH), width: kScreenW, height: kHeaderViewH)
+        topHeaderView.moreBtn.isHidden = true
+        topHeaderView.titleLabel.text = "常用"
+        topHeaderView.iconView.image = UIImage(named: "Img_orange")
+        return topHeaderView
+    }()
     //顶部视图
-//    fileprivate lazy var topHeaderView : DYRecommendHeaderView = {
-//        
-//    }()
+    fileprivate lazy var topView : DYRecommendGameView = {
+        let topView = DYRecommendGameView.recommendGameView()
+        topView.frame = CGRect(x: 0, y: -kTopViewH, width: kScreenW, height: kTopViewH)
+        return topView
+    }()
     
+    // MARK: - View life
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,6 +80,15 @@ extension DYGameVC {
     fileprivate func setUpUI() {
         //1. 添加UICollectionView
         view.addSubview(collectionView)
+        
+        //2. 添加顶部的header
+        collectionView.addSubview(topHeaderView)
+        
+        //3. 添加顶部的View
+        collectionView.addSubview(topView)
+        
+        //4. 增加collectionView的内边距
+        collectionView.contentInset = UIEdgeInsetsMake(kHeaderViewH+kTopViewH, 0, 0, 0)
     }
 }
 
@@ -75,8 +97,14 @@ extension DYGameVC {
     fileprivate func requestData() {
         //1. 请求游戏数据
         gameVM.requestGameData {
-            //刷新数据
+
+            //1.1传递头部视图数据
+            self.topView.groupArray = Array(self.gameVM.gameDatas[0..<10])
+            
+            //1.2 刷新数据
             self.collectionView.reloadData()
+            
+            
         }
     }
 }

@@ -16,16 +16,9 @@ class DYRecommendGameView: UIView {
     // MARK: - 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
     //数据数组
-    var groupArray : [DYAnchorGroupModel]?{
+    var groupArray : [DYBaseGameModel]?{
         didSet{
-            //1. 删除前两个数据
-            groupArray?.removeFirst()
-            groupArray?.removeFirst()
-            //2. 增加更多
-            let moreData = DYAnchorGroupModel()
-            moreData.tag_name = "更多"
-            groupArray?.append(moreData)
-            //3. 刷新数据
+            // 刷新数据
             collectionView.reloadData()
         }
     }

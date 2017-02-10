@@ -12,8 +12,8 @@ import UIKit
 private let kItemMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 3 * kItemMargin) * 0.5
 private let kItemH : CGFloat = kItemW * 3 / 4
-private let kPrettyItemH : CGFloat = kItemW * 4 / 3
 private let kHeaderViewH : CGFloat = 50
+private let kPrettyItemH : CGFloat = kItemW * 4 / 3
 private let kCycleViewH : CGFloat = kScreenW * 3 / 8
 private let kGameViewH : CGFloat = 90
 
@@ -97,7 +97,16 @@ extension DYRecommendVC {
             self.collectionView.reloadData()
             
             //1.2 传递数据给gameView
-            self.gameView.groupArray = self.recommendVM.AnchorGroups
+            var groupArray = self.recommendVM.AnchorGroups
+            //1.3 删除前两个数据
+            groupArray.removeFirst()
+            groupArray.removeFirst()
+            //1.4 增加更多
+            let moreData = DYAnchorGroupModel()
+            moreData.tag_name = "更多"
+            groupArray.append(moreData)
+            
+            self.gameView.groupArray = groupArray
         }
         
         //2.请求banner数据

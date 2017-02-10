@@ -25,3 +25,17 @@ class DYRecommendHeaderView: UICollectionReusableView {
         }
     }
 }
+// MARK: - 快速构造的方法
+extension DYRecommendHeaderView {
+    class func headerView() -> DYRecommendHeaderView {
+        return Bundle.main.loadNibNamed("DYRecommendHeaderView", owner: nil, options: nil)?.first as! DYRecommendHeaderView
+    }
+}
+
+
+
+
+
+
+
+
