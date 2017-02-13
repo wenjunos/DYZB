@@ -20,6 +20,8 @@
 		2F6C63FC1E2E2B5600681550 /* DYCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6C63FA1E2E2B5600681550 /* DYCollectionNormalCell.xib */; };
 		2F716DD51E287D1800C59E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F716DD21E287D1800C59E0D /* Main.storyboard */; };
 		2F716DDD1E287D6100C59E0D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F716DDC1E287D6100C59E0D /* Home.storyboard */; };
+		2F77152A1E51916C00EFCAEE /* DYFunnyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7715291E51916C00EFCAEE /* DYFunnyVC.swift */; };
+		2F77152C1E51994800EFCAEE /* DYFunnyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77152B1E51994800EFCAEE /* DYFunnyVM.swift */; };
 		2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F8579791E287DF600A56B38 /* Live.storyboard */; };
 		2F85797C1E287E0C00A56B38 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F85797B1E287E0C00A56B38 /* Follow.storyboard */; };
 		2F85797E1E287E2300A56B38 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F85797D1E287E2300A56B38 /* Me.storyboard */; };
@@ -43,6 +45,10 @@
 		2FD0520D1E30C1D80043F454 /* DYRecommendVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */; };
 		2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD0520E1E30C2F00043F454 /* NSDate-Extension.swift */; };
 		2FD698211E31B96A00521E5C /* DYAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD698201E31B96A00521E5C /* DYAnchorModel.swift */; };
+		2FDBA6C11E5159300063B821 /* DYAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDBA6C01E5159300063B821 /* DYAmuseMenuView.swift */; };
+		2FDBA6C31E5159860063B821 /* DYAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBA6C21E5159860063B821 /* DYAmuseMenuView.xib */; };
+		2FDBA6C61E51622B0063B821 /* DYAmuseMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDBA6C41E51622B0063B821 /* DYAmuseMenuCell.swift */; };
+		2FDBA6C71E51622B0063B821 /* DYAmuseMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBA6C51E51622B0063B821 /* DYAmuseMenuCell.xib */; };
 		2FE61BC11E4B199100984343 /* DYRecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE61BC01E4B199100984343 /* DYRecommendGameView.swift */; };
 		2FE61BC31E4B19B700984343 /* DYRecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FE61BC21E4B19B700984343 /* DYRecommendGameView.xib */; };
 		2FE61BC61E4B281000984343 /* DYRecommendGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE61BC41E4B281000984343 /* DYRecommendGameCell.swift */; };
@@ -90,6 +96,8 @@
 		2F6C63FA1E2E2B5600681550 /* DYCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYCollectionNormalCell.xib; sourceTree = "<group>"; };
 		2F716DD21E287D1800C59E0D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2F716DDC1E287D6100C59E0D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "斗鱼/Classes/Home/Controller/Home.storyboard"; sourceTree = SOURCE_ROOT; };
+		2F7715291E51916C00EFCAEE /* DYFunnyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYFunnyVC.swift; sourceTree = "<group>"; };
+		2F77152B1E51994800EFCAEE /* DYFunnyVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYFunnyVM.swift; sourceTree = "<group>"; };
 		2F8579791E287DF600A56B38 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Live.storyboard; path = "斗鱼/Classes/Live/Controller/Live.storyboard"; sourceTree = SOURCE_ROOT; };
 		2F85797B1E287E0C00A56B38 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Follow.storyboard; path = "斗鱼/Classes/Follow/Controller/Follow.storyboard"; sourceTree = SOURCE_ROOT; };
 		2F85797D1E287E2300A56B38 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Me.storyboard; path = "斗鱼/Classes/Me/Controller/Me.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -119,6 +127,10 @@
 		2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendVM.swift; sourceTree = "<group>"; };
 		2FD0520E1E30C2F00043F454 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		2FD698201E31B96A00521E5C /* DYAnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAnchorModel.swift; sourceTree = "<group>"; };
+		2FDBA6C01E5159300063B821 /* DYAmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAmuseMenuView.swift; sourceTree = "<group>"; };
+		2FDBA6C21E5159860063B821 /* DYAmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYAmuseMenuView.xib; sourceTree = "<group>"; };
+		2FDBA6C41E51622B0063B821 /* DYAmuseMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYAmuseMenuCell.swift; sourceTree = "<group>"; };
+		2FDBA6C51E51622B0063B821 /* DYAmuseMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYAmuseMenuCell.xib; sourceTree = "<group>"; };
 		2FE61BC01E4B199100984343 /* DYRecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendGameView.swift; sourceTree = "<group>"; };
 		2FE61BC21E4B19B700984343 /* DYRecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYRecommendGameView.xib; sourceTree = "<group>"; };
 		2FE61BC41E4B281000984343 /* DYRecommendGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendGameCell.swift; sourceTree = "<group>"; };
@@ -177,6 +189,7 @@
 				2F6C63F31E2E078C00681550 /* DYRecommendVC.swift */,
 				2F2AD9D51E4C73C6005B5762 /* DYGameVC.swift */,
 				2FF8B8001E4D6BC500953316 /* DYAmuseVC.swift */,
+				2F7715291E51916C00EFCAEE /* DYFunnyVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +218,10 @@
 				2FE61BC21E4B19B700984343 /* DYRecommendGameView.xib */,
 				2FE61BC41E4B281000984343 /* DYRecommendGameCell.swift */,
 				2FE61BC51E4B281000984343 /* DYRecommendGameCell.xib */,
+				2FDBA6C01E5159300063B821 /* DYAmuseMenuView.swift */,
+				2FDBA6C21E5159860063B821 /* DYAmuseMenuView.xib */,
+				2FDBA6C41E51622B0063B821 /* DYAmuseMenuCell.swift */,
+				2FDBA6C51E51622B0063B821 /* DYAmuseMenuCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +417,7 @@
 				2FD0520C1E30C1D80043F454 /* DYRecommendVM.swift */,
 				2F2AD9D91E4C7400005B5762 /* DYGameVM.swift */,
 				2F9548251E4DB0BB007E1DF9 /* DYAmuseVM.swift */,
+				2F77152B1E51994800EFCAEE /* DYFunnyVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -601,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FF8ACBD1E349B1700FB4C64 /* DYRecommendCycleCell.xib in Resources */,
+				2FDBA6C71E51622B0063B821 /* DYAmuseMenuCell.xib in Resources */,
 				2FA1F6FA1E276F97001C5C58 /* LaunchScreen.storyboard in Resources */,
 				2F16DBB41E2F70A2001450A0 /* DYRecommendPrettyCell.xib in Resources */,
 				2FA1F6F71E276F97001C5C58 /* Assets.xcassets in Resources */,
@@ -609,6 +628,7 @@
 				2F85797A1E287DF600A56B38 /* Live.storyboard in Resources */,
 				2FE61BC31E4B19B700984343 /* DYRecommendGameView.xib in Resources */,
 				2F6C63FC1E2E2B5600681550 /* DYCollectionNormalCell.xib in Resources */,
+				2FDBA6C31E5159860063B821 /* DYAmuseMenuView.xib in Resources */,
 				2F716DDD1E287D6100C59E0D /* Home.storyboard in Resources */,
 				2F6C63F81E2E12C800681550 /* DYRecommendHeaderView.xib in Resources */,
 				2FE61BC71E4B281000984343 /* DYRecommendGameCell.xib in Resources */,
@@ -691,15 +711,18 @@
 				2F6C63FB1E2E2B5600681550 /* DYCollectionNormalCell.swift in Sources */,
 				2FA1F6F01E276F97001C5C58 /* AppDelegate.swift in Sources */,
 				2F6C63F41E2E078C00681550 /* DYRecommendVC.swift in Sources */,
+				2FDBA6C61E51622B0063B821 /* DYAmuseMenuCell.swift in Sources */,
 				2F8579901E28D32D00A56B38 /* DYPageContentView.swift in Sources */,
 				2F8579891E28B4E400A56B38 /* DYPageTitleView.swift in Sources */,
 				2FE61BC11E4B199100984343 /* DYRecommendGameView.swift in Sources */,
 				2F8579921E28D83C00A56B38 /* UIColor-Extension.swift in Sources */,
 				2F8579871E28859700A56B38 /* UIBarButtonItem-Extension.swift in Sources */,
+				2F77152A1E51916C00EFCAEE /* DYFunnyVC.swift in Sources */,
 				2F6C63F71E2E12C800681550 /* DYRecommendHeaderView.swift in Sources */,
 				2F2AD9D81E4C73D8005B5762 /* DYBaseGameModel.swift in Sources */,
 				2F2AD9DC1E4C74FF005B5762 /* DYGameModel.swift in Sources */,
 				2F2AD9DA1E4C7400005B5762 /* DYGameVM.swift in Sources */,
+				2FDBA6C11E5159300063B821 /* DYAmuseMenuView.swift in Sources */,
 				2FF8ACB71E348FF700FB4C64 /* DYRecommendCycleView.swift in Sources */,
 				2F9DB34F1E30D2E200E5BE09 /* DYAnchorGroupModel.swift in Sources */,
 				2FF3D40A1E34823D00D85F86 /* DYCollectionBaseCell.swift in Sources */,
@@ -709,6 +732,7 @@
 				2F9548291E4DC771007E1DF9 /* DYAnchorBaseViewModel.swift in Sources */,
 				2FF8B8031E4D6F9000953316 /* DYBaseCollectionVC.swift in Sources */,
 				2FD0520F1E30C2F00043F454 /* NSDate-Extension.swift in Sources */,
+				2F77152C1E51994800EFCAEE /* DYFunnyVM.swift in Sources */,
 				2FD0520D1E30C1D80043F454 /* DYRecommendVM.swift in Sources */,
 				2FF8B8011E4D6BC500953316 /* DYAmuseVC.swift in Sources */,
 				2F9548261E4DB0BB007E1DF9 /* DYAmuseVM.swift in Sources */,

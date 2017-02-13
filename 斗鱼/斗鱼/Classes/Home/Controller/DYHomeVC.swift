@@ -30,14 +30,8 @@ class DYHomeVC: UIViewController {
         childsVC.append(DYRecommendVC())
         childsVC.append(DYGameVC())
         childsVC.append(DYAmuseVC())
-        for _ in 0..<1{
-            //1.创建子控制器
-            let childVC = UIViewController()
-            childVC.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            //2.添加到数组中
-            childsVC.append(childVC)
-        }
-        
+        childsVC.append(DYFunnyVC())
+
         let contentView = DYPageContentView(frame: frame, chlidsVC: childsVC, parentVC: self)
         
         contentView.delegate = self
@@ -67,7 +61,7 @@ extension DYHomeVC {
         
         //3. 添加滑动内容的view
         view.addSubview(pageContentView)
-//        pageContentView.backgroundColor = UIColor.blue
+
     }
     
     //设置导航栏item
