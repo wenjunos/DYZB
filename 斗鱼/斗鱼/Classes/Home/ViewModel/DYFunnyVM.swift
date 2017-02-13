@@ -16,6 +16,6 @@ class DYFunnyVM: DYAnchorBaseViewModel {
 extension DYFunnyVM {
 
     func requestFunnyData(finishedCallBack : @escaping () -> ()) {
-        requestData(url: "http://capi.douyucdn.cn/api/v1/getColumnRoom/3", params: ["limit" : 30, "offset" : 0], finishedCallBack: finishedCallBack)
+        requestData(isGroupData: false, url: "http://capi.douyucdn.cn/api/v1/getColumnRoom/3", params: ["limit" : 30, "offset" : 0], finishedCallBack: finishedCallBack)
     }
 }
